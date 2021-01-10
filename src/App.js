@@ -1,5 +1,5 @@
 import "antd/dist/antd.css";
-import { Route, Switch } from "react-router-dom";
+import { Redirect, Route, Switch } from "react-router-dom";
 import "./App.css";
 import { adminRoutes } from "./routes";
 
@@ -20,6 +20,7 @@ function App() {
             />
           );
         })}
+        <Redirect to="/404" />
       </Switch>
     </div>
   );
