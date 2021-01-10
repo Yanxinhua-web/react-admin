@@ -1,12 +1,11 @@
 import "antd/dist/antd.css";
 import { Redirect, Route, Switch } from "react-router-dom";
 import "./App.css";
+import Frame from "./components/Frame/Index";
 import { adminRoutes } from "./routes";
-
 function App() {
   return (
-    <div className="App">
-      <h1>我是app组件</h1>
+    <Frame>
       <Switch>
         {adminRoutes.map((route) => {
           return (
@@ -22,7 +21,7 @@ function App() {
         })}
         <Redirect to="/404" />
       </Switch>
-    </div>
+    </Frame>
   );
 }
 

@@ -1,3 +1,4 @@
+import "antd/dist/antd.css";
 import React from "react";
 import ReactDOM from "react-dom";
 import {
@@ -9,13 +10,12 @@ import {
 import App from "./App";
 import "./index.css";
 import { mainRoutes } from "./routes";
-
 ReactDOM.render(
   <Router>
     <Switch>
       <Route path="/admin" render={(routeProps) => <App {...routeProps} />} />
-      {mainRoutes.map((routr) => {
-        return <Route key={routr.path} {...routr} />;
+      {mainRoutes.map((route) => {
+        return <Route key={route.path} {...route} />;
       })}
       <Redirect to="/404" />
     </Switch>
